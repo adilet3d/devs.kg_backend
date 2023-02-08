@@ -9,7 +9,7 @@ class Video(models.Model):
     company= models.ForeignKey(Company, on_delete=models.CASCADE,
     related_name='videos',verbose_name='Компания-Организатор')
     description=models.TextField(verbose_name='Описание')
-    video=models.FileField(upload_to='/video/video/',verbose_name='Видео')
+    video=models.FileField(upload_to='video/video/',verbose_name='Видео')
     email=models.EmailField('Почта')
 
  

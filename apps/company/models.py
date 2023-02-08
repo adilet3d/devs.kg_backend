@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Company(models.Model):
-    logo= models.ImageField(upload_to='company/logo/',verbose_name='Логотип')
+    logo= models.ImageField(upload_to='company/logo',verbose_name='Логотип')
     name= models.CharField(max_length=120, verbose_name='Название')
     description=models.TextField(verbose_name='Описание')
     telegram=models.URLField(verbose_name='Телега')

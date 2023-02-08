@@ -3,7 +3,7 @@ from apps.company.models import Company
 # Create your models here.
 class Event(models.Model):
     date=models.DateTimeField(verbose_name='Дата проведения')
-    image=models.ImageField(upload_to='/events/image',
+    image=models.ImageField(upload_to='event/image',
     verbose_name='Фото')
     company=models.ForeignKey(Company,on_delete= models.CASCADE,
     related_name='events',verbose_name='Компания')
