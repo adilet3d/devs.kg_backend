@@ -5,8 +5,19 @@ from django.conf import settings
 from django.conf.urls.static import static
 from rest_framework import permissions
 
+
+
+urlpatterns2 = [
+    path('company/' ,include ('apps.company.urls')),
+    path('event/' ,include ('apps.event.urls')),
+    path('vacancy/' ,include ('apps.vacancii.urls')),
+    path('video/' ,include ('apps.video.urls')),
+]
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('login/', include('rest_framework.urls')),
+    path('api/', include(urlpatterns2))
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
